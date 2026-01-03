@@ -40,22 +40,23 @@ fn main() {
     println!("Guess the number!");
     // 生成一个随机数
     let secret_number = rand::thread_rng().gen_range(1..=100);
-    // 用户输入
-    let mut guess_str = String::new();
-    io::stdin().read_line(&mut guess_str).expect("Failed to read line");
-
-    let mut guess: u32 = guess_str.trim().parse().expect("Please type a number!");
     loop {
+        println!("Please input your guess.");
+        // 用户输入
+        let mut guess = String::new();
+        io::stdin().read_line(&mut guess).expect("Failed to read line");
+        let guess: u32 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(_) => continue,
+        };
+        println!("You guessed: {}", guess);
         match guess.cmp(&secret_number) {
             Ordering::Less => println!("Too small!"),
             Ordering::Greater => println!("Too big!"),
             Ordering::Equal => {
                 println!("You win!");
-                return;
+                break;
             }
         }
-        guess_str.clear();
-        io::stdin().read_line(&mut guess_str).expect("Failed to read line");
-        guess = guess_str.trim().parse().expect("Please type a number!");
     }
 }
