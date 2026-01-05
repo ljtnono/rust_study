@@ -171,11 +171,76 @@
 // }
 
 
-fn main() {
-    println!("Hello, world!");
-    another_function();
-}
+// fn main() {
+//     println!("Hello, world!");
+//     another_function(&mut 32);
+// }
+//
+// // fn another_function() {
+// //     println!("Another function.");
+// // }
+//
+// fn another_function(x: &mut i32) {
+//     *x = 44;
+//     println!("Another function. x = {}", x);
+// }
 
-fn another_function() {
-    println!("Another function.");
+
+// fn main() {
+//     let y = {
+//         let x = 5;
+//         x + 1;
+//     };
+//     println!("y is {}", y == ());
+// }
+
+
+// fn five() -> i32 {
+//     5
+// }
+//
+// fn main() {
+//     let x = five();
+//     println!("The value of x is: {}", x);
+// }
+
+
+// fn main() {
+//     let x = plus_one(5);
+//
+//     println!("The value of x is: {:?}", x);
+// }
+//
+// fn plus_one(x: i32) -> i32 {
+//     x + 1
+// }
+
+
+// ==================== capter04 ==================== //
+
+// hello, world
+
+// So we’re doing something complicated here, long enough that we need
+// multiple lines of comments to do it! Whew! Hopefully, this comment will
+// explain what’s going on.
+
+// fn main() {
+//     let lucky_number = 7; // I'm feeling lucky today
+// }
+
+// fn main() {
+//     // I'm feeling lucky today
+//     let lucky_number = 7;
+// }
+
+// ==================== capter05 ==================== //
+
+fn main() {
+    let number = 3;
+
+    if number < 5 {
+        println!("condition was true");
+    } else {
+        println!("condition was false");
+    }
 }
