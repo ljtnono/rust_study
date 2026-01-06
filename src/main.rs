@@ -358,13 +358,17 @@
 //
 // }
 
+// fn main() {
+//
+//     for number in (1..4).rev() {
+//         println!("{}", number);
+//     }
+//     println!("LIFTOFF!!!")
+//
+// }
+
+mod programming_rust;
+
 fn main() {
-
-    for number in (1..4).rev() {
-        println!("{}", number);
-    }
-    println!("LIFTOFF!!!")
-
+    println!("{:?}", programming_rust::build_vector2());
 }
-
-
